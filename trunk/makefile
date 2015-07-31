@@ -1,7 +1,7 @@
-TEST_NAME = queue/sequence_queue
+TEST_NAME = graphic/adjacent_multiple_list_graphic
 
-DIRS = list stack queue
-DIRS = queue
+DIRS = list stack queue array tree graphic
+DIRS = graphic
 
 CC = gcc 
 CFLAGS = -Wall -g -I. -L$(LIB)
@@ -20,6 +20,13 @@ TEST_SOURCES := $(subst $(TEST_SRC)/list/list_test.c,,$(TEST_SOURCES))
 TEST_SOURCES := $(subst $(TEST_SRC)/stack/stack_test.c,,$(TEST_SOURCES)) 
 TEST_SOURCES := $(subst $(TEST_SRC)/queue/queue_test.c,,$(TEST_SOURCES)) 
 TEST_SOURCES := $(subst $(TEST_SRC)/string/string_test.c,,$(TEST_SOURCES)) 
+TEST_SOURCES := $(subst $(TEST_SRC)/array/sparse_matrix_test.c,,$(TEST_SOURCES)) 
+TEST_SOURCES := $(subst $(TEST_SRC)/array/generalized_list_test.c,,$(TEST_SOURCES)) 
+TEST_SOURCES := $(subst $(TEST_SRC)/tree/binary_tree_test.c,,$(TEST_SOURCES)) 
+TEST_SOURCES := $(subst $(TEST_SRC)/tree/tree_test.c,,$(TEST_SOURCES)) 
+TEST_SOURCES := $(subst $(TEST_SRC)/graphic/graphic_test.c,,$(TEST_SOURCES)) 
+TEST_SOURCES := $(subst $(TEST_SRC)/graphic/directed_graphic_test.c,,$(TEST_SOURCES)) 
+TEST_SOURCES := $(subst $(TEST_SRC)/graphic/undirected_graphic_test.c,,$(TEST_SOURCES)) 
 
 TEST_OBJS = $(patsubst %.c,%.o,$(TEST_SOURCES))
 TEST_EXES = $(patsubst %.c,%.exe,$(TEST_SOURCES))
@@ -27,6 +34,8 @@ TEST_EXES = $(patsubst %.c,%.exe,$(TEST_SOURCES))
 DELETE_TARGETS = $(foreach dir,$(DIRS),$(BIN)\$(dir)\*)
 
 %.o: %.c
+	mkdir -p ./bin/$(TEST_NAME)
+	rm -rf ./bin/$(TEST_NAME)
 	$(CC) $(CFLAGS) -c $< -o $(patsubst $(TEST_SRC)/%, $(BIN)/%, $(patsubst $(SRC)/%, $(BIN)/%, $@))
 
 %.exe: %.o
@@ -36,4 +45,4 @@ all: $(OBJS) $(TEST_OBJS) $(TEST_EXES)
 	$(BIN)/$(TEST_NAME)_test.exe
 	
 clean:
-	del $(DELETE_TARGETS) /Q
+	rm -f $(DELETE_TARGETS)

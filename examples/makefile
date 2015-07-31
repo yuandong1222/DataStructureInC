@@ -34,6 +34,8 @@ TEST_EXES = $(patsubst %.c,%.exe,$(TEST_SOURCES))
 DELETE_TARGETS = $(foreach dir,$(DIRS),$(BIN)\$(dir)\*)
 
 %.o: %.c
+	mkdir -p ./bin/$(TEST_NAME)
+	rm -rf ./bin/$(TEST_NAME)
 	$(CC) $(CFLAGS) -c $< -o $(patsubst $(TEST_SRC)/%, $(BIN)/%, $(patsubst $(SRC)/%, $(BIN)/%, $@))
 
 %.exe: %.o
@@ -43,4 +45,4 @@ all: $(OBJS) $(TEST_OBJS) $(TEST_EXES)
 	$(BIN)/$(TEST_NAME)_test.exe
 	
 clean:
-	del $(DELETE_TARGETS) /Q
+	rm -f $(DELETE_TARGETS)

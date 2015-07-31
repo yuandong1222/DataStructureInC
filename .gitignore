@@ -1,3 +1,4 @@
 *.exe
 *.o
 .svn
+.DS_Store

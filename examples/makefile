@@ -1,7 +1,7 @@
-TEST_NAME = graphic/adjacent_multiple_list_graphic
+TEST_NAME = list/link_list
 
 DIRS = list stack queue array tree graphic
-DIRS = graphic
+DIRS = list
 
 CC = gcc 
 CFLAGS = -Wall -g -I. -L$(LIB)

@@ -9,10 +9,10 @@
 
 #include "include/tree/tree.h"
 
-#include "include/CUnit/Basic.h"
-#include "include/CUnit/Console.h"
-#include "include/CUnit/Automated.h"
-#include "include/CUnit/TestDB.h"
+#include "CUnit/Basic.h"
+#include "CUnit/Console.h"
+#include "CUnit/Automated.h"
+#include "CUnit/TestDB.h"
 
 TREE_TYPE get_test_tree(char* definition) {
 	TREE_TYPE tree = NULL;

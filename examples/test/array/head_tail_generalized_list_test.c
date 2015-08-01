@@ -7,10 +7,10 @@
 
 #include <stdlib.h>
 
-#include "include/CUnit/Basic.h"
-#include "include/CUnit/Console.h"
-#include "include/CUnit/Automated.h"
-#include "include/CUnit/TestDB.h"
+#include "CUnit/Basic.h"
+#include "CUnit/Console.h"
+#include "CUnit/Automated.h"
+#include "CUnit/TestDB.h"
 
 #include "include/array/head_tail_generalized_list.h"
 

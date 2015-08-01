@@ -9,9 +9,9 @@
 
 #include "include/list/polynomial.h"
 
-#include "include/CUnit/Basic.h"
-#include "include/CUnit/Console.h"
-#include "include/CUnit/Automated.h"
+#include "CUnit/Basic.h"
+#include "CUnit/Console.h"
+#include "CUnit/Automated.h"
 
 void assertTerm(Polynomial polynomial, int position, float coefficient,
 		int exponent, BOOLEAN isLast) {

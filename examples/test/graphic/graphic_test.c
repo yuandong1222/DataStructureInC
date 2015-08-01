@@ -9,10 +9,10 @@
 
 #include "include/graphic/graphic.h"
 
-#include "include/CUnit/Basic.h"
-#include "include/CUnit/Console.h"
-#include "include/CUnit/Automated.h"
-#include "include/CUnit/TestDB.h"
+#include "CUnit/Basic.h"
+#include "CUnit/Console.h"
+#include "CUnit/Automated.h"
+#include "CUnit/TestDB.h"
 
 int get_number(char* string, int start_index, int end_index) {
 	int value = 0;

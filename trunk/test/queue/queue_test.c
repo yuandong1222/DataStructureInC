@@ -9,10 +9,10 @@
 
 #include "include/queue/queue.h"
 
-#include "include/CUnit/Basic.h"
-#include "include/CUnit/Console.h"
-#include "include/CUnit/Automated.h"
-#include "include/CUnit/TestDB.h"
+#include "CUnit/Basic.h"
+#include "CUnit/Console.h"
+#include "CUnit/Automated.h"
+#include "CUnit/TestDB.h"
 
 int test_QueueTraverse_Count = 0;
 Status test_QueueTraverse_Function_Success(ElementType* element) {

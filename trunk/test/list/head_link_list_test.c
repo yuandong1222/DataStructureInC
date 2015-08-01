@@ -9,10 +9,10 @@
 
 #include "include/list/head_link_list.h"
 
-#include "include/CUnit/Basic.h"
-#include "include/CUnit/Console.h"
-#include "include/CUnit/Automated.h"
-#include "include/CUnit/TestDB.h"
+#include "CUnit/Basic.h"
+#include "CUnit/Console.h"
+#include "CUnit/Automated.h"
+#include "CUnit/TestDB.h"
 
 #define TEST_LIST_LENGTH 3
 
@@ -126,8 +126,6 @@ void test_InsertFirst(void) {
 	CU_ASSERT_EQUAL(result, OK);
 	CU_ASSERT_PTR_EQUAL(list -> head, node);
 	CU_ASSERT_PTR_EQUAL(list -> length, TEST_LIST_LENGTH + 1);
-
-	//TODO 空表的情况
 }
 void test_DeleteFirst(void) {
 	LIST_TYPE list = getTestList();

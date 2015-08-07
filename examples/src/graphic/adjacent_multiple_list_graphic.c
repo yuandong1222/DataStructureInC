@@ -682,7 +682,7 @@ Status FindArticul(GRAPHIC_TYPE graphic, ElementType** result, int* result_lengt
 
 	free(find_articul_visit_result);
 	free(find_articul_low_result);
-	free(find_articul_make_mark);
+	free(find_articul_mark);
 
 	return OK;
 }

@@ -170,7 +170,7 @@ Status ListDelete(LIST_TYPE list, int position, ElementType *deletedElement) {
 			if (deletedNode -> next != NULL)
 				deletedNode -> next -> prior = node;
 
-			free(deletedElement);
+			free(deletedNode);
 
 			return OK;
 		}

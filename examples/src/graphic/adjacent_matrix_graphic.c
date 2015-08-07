@@ -570,10 +570,12 @@ void shortest_path_calculate_path(GRAPHIC_TYPE graphic, VERTEX_TYPE* start_verte
 				current_vertex_index = j;
 			}
 		}
-		finish[current_vertex_index] = TRUE;
+                if (current_vertex_index != -1) {
+		    finish[current_vertex_index] = TRUE;
+                }
 	}
-	free(min_path_weight_dimension);
-	free(finish);
+	free (min_path_weight_dimension);
+	free (finish);
 }
 
 void shortext_path_build_result(GRAPHIC_TYPE graphic, 

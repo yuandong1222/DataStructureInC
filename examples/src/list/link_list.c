@@ -166,7 +166,7 @@ Status ListDelete(LIST_TYPE list, int position, ElementType *deletedElement) {
 			*deletedElement = deletedNode -> data;
 
 			node -> next = deletedNode -> next;
-			free(deletedElement);
+			free(deletedNode);
 
 			return OK;
 		}

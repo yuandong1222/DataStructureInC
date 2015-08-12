@@ -78,10 +78,10 @@ All codes for the teaching material DataStructure writen by Weimin Yan.
 
 ## 3. Directory
 
-** /examples **
+**/examples**
 
 Unit tests and impl codes.
 
-** /trunk **
+**/trunk**
 
 Only the tests and method define without impl codes.
